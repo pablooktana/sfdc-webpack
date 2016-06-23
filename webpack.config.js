@@ -2,6 +2,8 @@ var glob = require('glob');
 var path = require('path');
 var webpack = require('webpack');
 
+var _ = require('lodash');
+
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 function isProd() {
@@ -40,9 +42,9 @@ var config = {
       }
     ]
   },
-  plugins: [
+  plugins: _.filter([
     isProd() ? new ExtractTextPlugin('dist/bundle.css', {allChunks: true}) : undefined
-  ].filter(),
+  ]),
   output: {
     filename: 'bundle.js'
   },

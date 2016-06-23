@@ -1,3 +1,5 @@
 .idea/
 config/
 *.sublime*
+settings.js
+node_modules/

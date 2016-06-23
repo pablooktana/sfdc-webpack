@@ -1,10 +1,11 @@
 {
   "name": "salesforce-webpack-integration",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "",
   "scripts": {
     "start": "node node_modules/.bin/webpack-dev-server --https",
     "build": "NODE_ENV=production node node_modules/.bin/webpack",
+    "deploy": "node bin/deploy",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -27,12 +28,12 @@
     "file-loader": "^0.8.5",
     "glob": "^7.0.3",
     "jsforce": "^1.6.1",
+    "lodash": "^4.13.1",
     "raw-loader": "^0.5.1",
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",
     "webpack": "^1.13.0",
     "webpack-dev-server": "^1.14.1"
   },
-  "dependencies": {
-  }
+  "dependencies": {}
 }
