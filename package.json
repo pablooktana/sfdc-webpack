@@ -5,7 +5,7 @@
   "scripts": {
     "start": "node node_modules/.bin/webpack-dev-server --https",
     "build": "NODE_ENV=production node node_modules/.bin/webpack",
-    "deploy": "node bin/deploy",
+    "deploy": "NODE_ENV=production node bin/deploy",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,12 +19,14 @@
   },
   "homepage": "https://github.com/pablooktana/sfdc-webpack#readme",
   "devDependencies": {
+    "archiver": "^1.0.0",
     "babel-core": "^6.8.0",
     "babel-loader": "^6.2.4",
     "babel-plugin-lodash": "^3.1.2",
     "babel-plugin-transform-runtime": "^6.8.0",
     "babel-preset-es2015": "^6.6.0",
     "css-loader": "^0.23.1",
+    "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.8.5",
     "glob": "^7.0.3",
     "jsforce": "^1.6.1",

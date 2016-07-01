@@ -43,16 +43,16 @@ var config = {
     ]
   },
   plugins: _.filter([
-    isProd() ? new ExtractTextPlugin('dist/bundle.css', {allChunks: true}) : undefined
+    new ExtractTextPlugin('bundle.css', {allChunks: true})
   ]),
   output: {
-    filename: 'bundle.js'
+    filename:  'bundle.js'
   },
   devtool: 'source-map'
 };
 
 if(isProd()) {
-  config.output.path = './resources-storage/job_science.resource/dist';
+  config.output.path = '.tmp';
   config.plugins.push(new webpack.optimize.UglifyJsPlugin());
 }
 
